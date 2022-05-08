@@ -39,9 +39,7 @@ function Home() {
         }
         axios.post('http://localhost:3500/imageurl',imageurl)
         .then(res=>{
-            console.log(res.data)
-            const boxInfo = res.data.outputs[0].data.regions[0].region_info.bounding_box
-            console.log(boxInfo)
+            const boxInfo = res.data
             displayFaceBox(calculateFaceBox(boxInfo))
         })
         .catch((err:any)=>{
@@ -53,6 +51,7 @@ function Home() {
         const width = Number(img.width)
         const height = Number(img.height)
         //boxData中的數據是%數，所以得用我們的圖片來計算出框框位置
+        console.log(width,height,boxData)
         return {
             leftCol:boxData.left_col*width,
             topRow:boxData.top_row*height,
