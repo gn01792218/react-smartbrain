@@ -8,11 +8,7 @@ import {FaceBoxDisplayData} from '../types/face'
 import { useAppSelector,useAppDispatch } from '../app/hooks'
 import {setUserEnries} from '../app/user'
 import axios from 'axios'
-// const Clarifai = process.env.REACT_APP_TRAVIS ? require('clarifai') : require('../');
-// console.log(Clarifai,process.env.REACT_APP_CLARIFAI_API_KEY)
-// const app = new Clarifai.App({
-//     apiKey: process.env.REACT_APP_CLARIFAI_API_KEY
-// });
+
 interface FaceBoxData{
     top_row:number,
     left_col:number,
@@ -27,7 +23,6 @@ function Home() {
     const [imageURL,setImageURL] = useState('')
     const [faceBox,setFaceBox] = useState({})
     function imageLinkFormInputOnChange(event: React.ChangeEvent<HTMLInputElement>) {
-        console.log(event.target.value)
         setImgLinkFormInput(event.target.value)
     }
     function onSubmit() {
@@ -35,19 +30,23 @@ function Home() {
         const userIdData={
             id:userId
         }
-        console.log(userId)
         axios.put('http://localhost:3500/image',userIdData)
         .then(res=>{
-            dispatch(setUserEnries(res.data))
+            dispatch(setUserEnries(res.data.entries))
         })
-        // app.models.predict(Clarifai.FACE_DETECT_MODEL,"https://samples.clarifai.com/face-det.jpg")
-        // .then((res:any)=>{
-        //     const boxInfo = res.outputs[0].data.regions[0].region_info.bounding_box
-        //         console.log(boxInfo)
-        //         displayFaceBox(calculateFaceBox(boxInfo))
-        // })
-        // .catch((err:any)=>{
-        // })
+        const imageurl = {
+            input :imgLinkFormInput
+        }
+        axios.post('http://localhost:3500/imageurl',imageurl)
+        .then(res=>{
+            console.log(res.data)
+            const boxInfo = res.data.outputs[0].data.regions[0].region_info.bounding_box
+            console.log(boxInfo)
+            displayFaceBox(calculateFaceBox(boxInfo))
+        })
+        .catch((err:any)=>{
+            console.log(err)
+        })
     }
     function calculateFaceBox(boxData:FaceBoxData){
         const img = document.getElementById('faceInputImg') as HTMLImageElement
