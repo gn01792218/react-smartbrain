@@ -34,7 +34,6 @@ export const userSlice = createSlice({
     }
 })
 
-export const {setUser} = userSlice.actions
-export const {setUserEnries} = userSlice.actions
+export const {setUser,setUserEnries} = userSlice.actions
 export const selectUser = (state:RootState) => state.user.user
 export default userSlice.reducer

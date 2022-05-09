@@ -24,7 +24,7 @@ function Sigin() {
         axios.post('https://limitless-shelf-55516.herokuapp.com/register',userRegisterData)
         .then(res=>{
             console.log(res.data)
-            navigate('/Login');
+            if(res.data.id) navigate('/Login');
         })
     }
     return (
