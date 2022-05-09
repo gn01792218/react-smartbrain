@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Logo from '../component/logo/Logo'
 import ImageLinkForm from '../component/imageLinkForm/ImageLinkForm'
 import Rank from '../component/rank/Rank'
@@ -38,7 +38,7 @@ function Home() {
         const imageurl = {
             input :imgLinkFormInput
         }
-        axios.post('http://localhost:3500/imageurl',imageurl)
+        axios.post('https://limitless-shelf-55516.herokuapp.com/imageurl',imageurl)
         .then(res=>{
             const boxInfo = res.data
             displayFaceBox(calculateFaceBox(boxInfo))
@@ -64,18 +64,8 @@ function Home() {
     function displayFaceBox(boxDisplayData:FaceBoxDisplayData){
         setFaceBox(boxDisplayData)
     }
-    // useEffect(()=>{
-    //     axios.get('https://limitless-shelf-55516.herokuapp.com/')
-    //     .then((res:any)=>{
-    //         console.log(res.data)
-    //     })
-    //     .catch((err:any)=>{
-    //         console.log(err)
-    //     })
-    // },[])
     return (
         <div>
-            <p>我的key{process.env.REACT_APP_CLARIFAI_API_KEY}</p>
            <h1>HI~{userName}</h1>
            <ParticlesElement/>
             <Logo />
