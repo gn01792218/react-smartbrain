@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-smartbrain/static/css/main.2de53849.css",
-    "main.js": "/react-smartbrain/static/js/main.c9df31bc.js",
+    "main.js": "/react-smartbrain/static/js/main.3380de5b.js",
     "static/js/960.97ae6840.chunk.js": "/react-smartbrain/static/js/960.97ae6840.chunk.js",
     "static/js/83.9d3de511.chunk.js": "/react-smartbrain/static/js/83.9d3de511.chunk.js",
     "static/js/945.d21b5577.chunk.js": "/react-smartbrain/static/js/945.d21b5577.chunk.js",
@@ -9,7 +9,7 @@
     "static/js/787.28cb0dcd.chunk.js": "/react-smartbrain/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/react-smartbrain/index.html",
     "main.2de53849.css.map": "/react-smartbrain/static/css/main.2de53849.css.map",
-    "main.c9df31bc.js.map": "/react-smartbrain/static/js/main.c9df31bc.js.map",
+    "main.3380de5b.js.map": "/react-smartbrain/static/js/main.3380de5b.js.map",
     "960.97ae6840.chunk.js.map": "/react-smartbrain/static/js/960.97ae6840.chunk.js.map",
     "83.9d3de511.chunk.js.map": "/react-smartbrain/static/js/83.9d3de511.chunk.js.map",
     "945.d21b5577.chunk.js.map": "/react-smartbrain/static/js/945.d21b5577.chunk.js.map",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.2de53849.css",
-    "static/js/main.c9df31bc.js"
+    "static/js/main.3380de5b.js"
   ]
 }
