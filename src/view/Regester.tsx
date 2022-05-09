@@ -21,7 +21,7 @@ function Sigin() {
             email:userEmail,
             password:userPassword,
         }
-        axios.post('http://localhost:3500/register',userRegisterData)
+        axios.post('https://limitless-shelf-55516.herokuapp.com/register',userRegisterData)
         .then(res=>{
             console.log(res.data)
             navigate('/Login');

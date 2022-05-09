@@ -21,7 +21,7 @@ function Login() {
             password:password
         }
         console.log(loginData)
-        axios.post('http://localhost:3500/sigin',loginData)
+        axios.post('https://limitless-shelf-55516.herokuapp.com/sigin',loginData)
         .then(res=>{
             console.log(res.data)
             if(!res.data){

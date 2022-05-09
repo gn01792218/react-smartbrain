@@ -36,7 +36,7 @@ function Home() {
             id:userId
         }
         console.log(userId)
-        axios.put('http://localhost:3500/image',userIdData)
+        axios.put('https://limitless-shelf-55516.herokuapp.com/image',userIdData)
         .then(res=>{
             dispatch(setUserEnries(res.data))
         })
@@ -65,15 +65,15 @@ function Home() {
     function displayFaceBox(boxDisplayData:FaceBoxDisplayData){
         setFaceBox(boxDisplayData)
     }
-    useEffect(()=>{
-        axios.get('http://localhost:3500/')
-        .then((res:any)=>{
-            console.log(res.data)
-        })
-        .catch((err:any)=>{
-            console.log(err)
-        })
-    },[])
+    // useEffect(()=>{
+    //     axios.get('https://limitless-shelf-55516.herokuapp.com/')
+    //     .then((res:any)=>{
+    //         console.log(res.data)
+    //     })
+    //     .catch((err:any)=>{
+    //         console.log(err)
+    //     })
+    // },[])
     return (
         <div>
             <p>我的key{process.env.REACT_APP_CLARIFAI_API_KEY}</p>
