@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+console.log(process.env.REACT_APP_API_BASE_URL)
 function Sigin() {
     const navigate = useNavigate();
     const [userName,setUserName] = useState('')
@@ -21,7 +22,7 @@ function Sigin() {
             email:userEmail,
             password:userPassword,
         }
-        axios.post('https://limitless-shelf-55516.herokuapp.com/register',userRegisterData)
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/register`,userRegisterData)
         .then(res=>{
             console.log(res.data)
             if(res.data.id) navigate('/Login');

@@ -31,14 +31,14 @@ function Home() {
             id:userId
         }
         console.log(userId)
-        axios.put('https://limitless-shelf-55516.herokuapp.com/image',userIdData)
+        axios.put(`${process.env.REACT_APP_API_BASE_URL}/image`,userIdData)
         .then(res=>{
             dispatch(setUserEnries(res.data.entries))
         })
         const imageurl = {
             input :imgLinkFormInput
         }
-        axios.post('https://limitless-shelf-55516.herokuapp.com/imageurl',imageurl)
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/imageurl`,imageurl)
         .then(res=>{
             const boxInfo = res.data
             displayFaceBox(calculateFaceBox(boxInfo))

@@ -20,10 +20,8 @@ function Login() {
             email:email,
             password:password
         }
-        console.log(loginData)
-        axios.post('https://limitless-shelf-55516.herokuapp.com/sigin',loginData)
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/sigin`,loginData)
         .then(res=>{
-            console.log(res.data)
             if(!res.data){
                 alert('登入失敗')
             }else{
