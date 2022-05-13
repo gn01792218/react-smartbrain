@@ -10,6 +10,7 @@ interface UserData{
 }
 interface UserState {
     user:UserData,
+    porfileModelOpen:boolean,
 }
 const initialState:UserState = {
     user:{
@@ -18,7 +19,8 @@ const initialState:UserState = {
         email:'',
         joined:'',
         entries:'',
-    }
+    },
+    porfileModelOpen:false,
 }
 
 export const userSlice = createSlice({
@@ -30,10 +32,13 @@ export const userSlice = createSlice({
         },
         setUserEnries:(state:UserState,action:PayloadAction<string>)=>{
             state.user.entries = action.payload
-        }
+        },
+        setProfileModalOpen:(state:UserState,action:PayloadAction<boolean>)=>{
+            state.porfileModelOpen = action.payload
+        },
     }
 })
 
-export const {setUser,setUserEnries} = userSlice.actions
+export const {setUser,setUserEnries,setProfileModalOpen} = userSlice.actions
 export const selectUser = (state:RootState) => state.user.user
 export default userSlice.reducer

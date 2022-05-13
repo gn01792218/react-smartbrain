@@ -2,18 +2,22 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../app/hooks'
 import { setIsLogin } from '../app/route'
+import {setProfileModalOpen} from '../app/user'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import Modal from './Modal/Modal'
+import Profile from './profile/Profile'
 function NavBar() {
     const navigate = useNavigate();
     const isLogin = useAppSelector((state) => state.route.isLogin)
+    const profileModalOpen = useAppSelector((state) => state.user.porfileModelOpen)
     const dispatch = useAppDispatch()
     const navigation = [
-        { name: 'Home', href: '/', current: true ,show:true},
+        { name: 'Home', href: '/', current: true ,show:true },
         { name: 'About', href: '/About', current: false,show:true },
         { name: 'Sigin', href: '/Sigin', current: false,show:isLogin===false },
-        {name:'Login', href:'/Login',current:false,show:isLogin===false},
-        { name: 'Logout', href: '/Login', current: false,show:isLogin===true },
+        { name:'Login', href:'/Login',current:false,show:isLogin===false },
+        { name: 'Logout', href: '', current: false,show:isLogin===true },
     ]
 
     function classNames(...classes:any) {
@@ -21,7 +25,11 @@ function NavBar() {
     }
     function logout() {
         dispatch(setIsLogin(false))
+        console.log(isLogin)
         navigate('/Login');
+    }
+    function openProfileModal(){
+        dispatch(setProfileModalOpen(true))
     }
     return (
         <nav>
@@ -36,6 +44,10 @@ function NavBar() {
                 <li className='mr-2'><Link to="/">Home</Link></li>
                 <li className='mr-2'><Link to="/About">About</Link></li>
             </ul> */}
+            {profileModalOpen &&
+                <Modal><Profile/></Modal>
+            }
+            
             <Disclosure as="nav" className="bg-gray-800 rounded-lg">
                 {({ open }) => (
                     <>
@@ -68,7 +80,7 @@ function NavBar() {
                                     <div className="hidden sm:block sm:ml-6">
                                         <ul className="flex space-x-4">
                                             {navigation.map((item) => (
-                                                item.show?
+                                                item.show &&
                                                 <li
                                                     key={item.name}
                                                     className={classNames(
@@ -77,8 +89,11 @@ function NavBar() {
                                                     )}
                                                     aria-current={item.current ? 'page' : undefined}
                                                 >
-                                                    <Link to={item.href}>{item.name}</Link>
-                                                </li> : null
+                                                    {
+                                                        item.href===""? <div onClick={logout}>Logout</div> :
+                                                        <Link to={item.href}>{item.name}</Link>
+                                                    }
+                                                </li>
                                             ))}
                                         </ul>
                                     </div>
@@ -119,6 +134,7 @@ function NavBar() {
                                                         <a
                                                             href="#"
                                                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                                            onClick={openProfileModal}
                                                         >
                                                             Your Profile
                                                         </a>
