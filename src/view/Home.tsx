@@ -17,7 +17,7 @@ interface FaceBoxData{
 }
 function Home() {
     const dispatch = useAppDispatch()
-    const userName = useAppSelector((state) => state.user.user.name)
+    
     const userId = useAppSelector((state) => state.user.user.id)
     const [imgLinkFormInput, setImgLinkFormInput] = useState('')
     const [imageURL,setImageURL] = useState('')
@@ -65,12 +65,14 @@ function Home() {
     }
     return (
         <div>
-           <h1>HI~{userName}</h1>
-           <ParticlesElement/>
             <Logo />
             <Rank />
             <ImageLinkForm inputChange={imageLinkFormInputOnChange} onSubmit={onSubmit} />
             <Facerecognition imageURL={imageURL} faceBox={faceBox as FaceBoxDisplayData}/>
+            <div className='absolute z-[0]'>
+            <ParticlesElement/>
+            </div>
+            
         </div>
     )
 }

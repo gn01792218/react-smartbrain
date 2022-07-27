@@ -10,6 +10,7 @@ import Profile from "./profile/Profile";
 function NavBar() {
   const navigate = useNavigate();
   const isLogin = useAppSelector((state) => state.route.isLogin);
+  const userData = useAppSelector((state) => state.user.user)
   const profileModalOpen = useAppSelector(
     (state) => state.user.porfileModelOpen
   );
@@ -120,6 +121,9 @@ function NavBar() {
                   </button> */}
 
                   {/* Profile dropdown */}
+                  {
+                    isLogin && <p className="text-white">{userData.name}</p>
+                  }
                   <Menu as="div" className="ml-3 relative">
                     <div>
                       <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
@@ -180,6 +184,7 @@ function NavBar() {
                       
                     </Transition>
                   </Menu>
+                  
                 </div>
               </div>
             </div>

@@ -38,7 +38,7 @@ function ParticlesElement() {
                     },
                     links: {
                         color: "#ffffff",
-                        distance: 150,
+                        distance: 80,
                         enable: true,
                         opacity: 1,
                         width: 1,

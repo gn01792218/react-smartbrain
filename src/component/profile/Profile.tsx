@@ -14,8 +14,8 @@ function Profile(props: any) {
                 <div className="w-[20px] h-[20px] absolute right-4 top-3 rounded-full flex justify-center items-center bg-gray-500/50 cursor-pointer text-white hover:text-slate-400 text-lg"
                     onClick={closeProfileModal}
                 >&times;</div>
-                <div className="flex justify-center -mt-8">
-                    <img src="https://i.imgur.com/8Km9tLL.jpg" className="rounded-full border-solid border-white border-2 -mt-3" />
+                <div className="w-[100px] h-[100px] mx-auto -mt-8 ">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" className="w-full h-full rounded-full border-solid border-white border-2 -mt-3" />
                 </div>
                 <div className="text-center px-3 pb-6 pt-2">
                     <h3 className="text-white text-sm bold font-sans">{userData.name}</h3>
