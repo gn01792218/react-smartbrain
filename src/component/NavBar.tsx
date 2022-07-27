@@ -13,7 +13,7 @@ function NavBar() {
     const profileModalOpen = useAppSelector((state) => state.user.porfileModelOpen)
     const dispatch = useAppDispatch()
     const navigation = [
-        { name: 'Home', href: '/', current: true ,show:true },
+        { name: 'Home', href: '/react-smartbrain', current: true ,show:true },
         { name: 'About', href: '/About', current: false,show:true },
         { name: 'Sigin', href: '/Sigin', current: false,show:isLogin===false },
         { name:'Login', href:'/Login',current:false,show:isLogin===false },

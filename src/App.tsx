@@ -12,7 +12,7 @@ function App() {
       <NavBar />
       <Suspense fallback={<div>Loading</div>}>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/react-smartbrain" element={<Home />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/Sigin" element={<Sigin/>}></Route>
           <Route path="/Login" element={<Login/>}></Route>

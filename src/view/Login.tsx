@@ -32,7 +32,7 @@ function Login() {
     }
     function login(){
         dispatch(setIsLogin(true))
-        navigate('/');
+        navigate('/react-smartbrain');
     }
     return (
         <div className="bg-grey-lighter min-h-screen flex flex-col">
