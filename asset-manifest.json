@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6c864f7.css",
-    "main.js": "/static/js/main.d38a23b4.js",
-    "static/js/960.97ae6840.chunk.js": "/static/js/960.97ae6840.chunk.js",
-    "static/js/83.5698c1f3.chunk.js": "/static/js/83.5698c1f3.chunk.js",
-    "static/js/945.a137e33a.chunk.js": "/static/js/945.a137e33a.chunk.js",
-    "static/js/937.6946ac9d.chunk.js": "/static/js/937.6946ac9d.chunk.js",
-    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/index.html",
-    "main.b6c864f7.css.map": "/static/css/main.b6c864f7.css.map",
-    "main.d38a23b4.js.map": "/static/js/main.d38a23b4.js.map",
-    "960.97ae6840.chunk.js.map": "/static/js/960.97ae6840.chunk.js.map",
-    "83.5698c1f3.chunk.js.map": "/static/js/83.5698c1f3.chunk.js.map",
-    "945.a137e33a.chunk.js.map": "/static/js/945.a137e33a.chunk.js.map",
-    "937.6946ac9d.chunk.js.map": "/static/js/937.6946ac9d.chunk.js.map",
-    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/react-smartbrain/static/css/main.b6c864f7.css",
+    "main.js": "/react-smartbrain/static/js/main.77e2d7d8.js",
+    "static/js/960.97ae6840.chunk.js": "/react-smartbrain/static/js/960.97ae6840.chunk.js",
+    "static/js/83.d5cedc76.chunk.js": "/react-smartbrain/static/js/83.d5cedc76.chunk.js",
+    "static/js/945.e9f2366b.chunk.js": "/react-smartbrain/static/js/945.e9f2366b.chunk.js",
+    "static/js/937.6946ac9d.chunk.js": "/react-smartbrain/static/js/937.6946ac9d.chunk.js",
+    "static/js/787.28cb0dcd.chunk.js": "/react-smartbrain/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/react-smartbrain/index.html",
+    "main.b6c864f7.css.map": "/react-smartbrain/static/css/main.b6c864f7.css.map",
+    "main.77e2d7d8.js.map": "/react-smartbrain/static/js/main.77e2d7d8.js.map",
+    "960.97ae6840.chunk.js.map": "/react-smartbrain/static/js/960.97ae6840.chunk.js.map",
+    "83.d5cedc76.chunk.js.map": "/react-smartbrain/static/js/83.d5cedc76.chunk.js.map",
+    "945.e9f2366b.chunk.js.map": "/react-smartbrain/static/js/945.e9f2366b.chunk.js.map",
+    "937.6946ac9d.chunk.js.map": "/react-smartbrain/static/js/937.6946ac9d.chunk.js.map",
+    "787.28cb0dcd.chunk.js.map": "/react-smartbrain/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6c864f7.css",
-    "static/js/main.d38a23b4.js"
+    "static/js/main.77e2d7d8.js"
   ]
 }
