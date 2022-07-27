@@ -12,8 +12,8 @@ function Facerecognition(props:Props){
         console.log(faceBox)
     })
     return (
-        <div className="w-[600px] flex justify-center relative">
-            <img id="faceInputImg" src={imageURL} alt="" />
+        <div className="w-[600px] flex justify-center mx-auto relative mt-5">
+            <img id="faceInputImg" src={imageURL} alt="人臉辨識目標照片" />
             <div className='bounding-box absolute flex flex-wrap justify-center cursor-pointer border-solid border-2 border-white' style={{top:faceBox.topRow,left:faceBox.leftCol,right:faceBox.rightCol,bottom:faceBox.bottomRow}}></div>
         </div>
     )
