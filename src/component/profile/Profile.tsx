@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useAppSelector, useAppDispatch } from '../../app/hooks'
 import { setProfileModalOpen } from '../../app/user'
 
@@ -24,8 +23,8 @@ function Profile(props: any) {
                 </div>
                 <div className="flex justify-center pb-3 text-white">
                     <div className="text-center mr-3 border-r pr-3">
-                        <h2>34</h2>
-                        <span>Photos</span>
+                        <h2>{userData.entries}</h2>
+                        <span>Ranks</span>
                     </div>
                     <div className="text-center">
                         <h2>42</h2>

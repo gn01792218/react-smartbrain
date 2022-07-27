@@ -52,7 +52,6 @@ function Home() {
         const width = Number(img.width)
         const height = Number(img.height)
         //boxData中的數據是%數，所以得用我們的圖片來計算出框框位置
-        console.log(width,height,boxData)
         return {
             leftCol:boxData.left_col*width,
             topRow:boxData.top_row*height,
